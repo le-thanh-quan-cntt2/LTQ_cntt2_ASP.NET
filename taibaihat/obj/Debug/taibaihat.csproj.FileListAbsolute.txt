@@ -1,0 +1,2 @@
+D:\baitapASPNET\WebApplication1\taibaihat\obj\Debug\taibaihat.csproj.AssemblyReference.cache
+D:\baitapASPNET\WebApplication1\taibaihat\obj\Debug\taibaihat.csproj.CoreCompileInputs.cache

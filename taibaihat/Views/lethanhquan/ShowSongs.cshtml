@@ -1,0 +1,13 @@
+﻿@model List<taibaihat.Models.Song>
+
+<h2>Bảng xếp hạng tháng 8</h2>
+
+<table>
+    @for (int i = 0; i < Model.Count; i++)
+    {
+        var song = Model[i]; //Lấy ra bài hát tại chỉ số i trong danh sách model
+<tr>
+    <td>@Html.ActionLink(song.FileName, "PreviewSong", "lethanhquan", new { id = song.Id }, null)</td>
+    <td><a href="@Url.Action("Download", "lethanhquan", new { id = song.Id })" class="">Tải về</a></td>
+</tr>}
+</table>
