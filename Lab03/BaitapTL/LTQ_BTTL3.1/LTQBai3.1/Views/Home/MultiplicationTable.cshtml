@@ -1,0 +1,32 @@
+﻿@model Dictionary<int, List<int>>
+
+<h2>Multiplication Table from 2 to 9</h2>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Number</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>5</th>
+            <th>6</th>
+            <th>7</th>
+            <th>8</th>
+            <th>9</th>
+            <th>10</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var row in Model)
+        {
+            <tr>
+                <td>@row.Key</td>
+                @foreach (var value in row.Value)
+                {
+                    <td>@value</td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>

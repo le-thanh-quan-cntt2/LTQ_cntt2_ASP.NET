@@ -1,0 +1,2 @@
+D:\baitapASPNET\LTQ_Lesson03\BaitapTL\LTQ_BTTL3.2\LTQ_BTTL3.2\obj\Debug\LTQ_BTTL3.2.csproj.AssemblyReference.cache
+D:\baitapASPNET\LTQ_Lesson03\BaitapTL\LTQ_BTTL3.2\LTQ_BTTL3.2\obj\Debug\LTQ_BTTL3.2.csproj.CoreCompileInputs.cache

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.34601.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LTQ_Bai3.2", "LTQ_Bai3.2\LTQ_Bai3.2.csproj", "{69BE87E9-A598-46E1-9564-C0580314C692}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{69BE87E9-A598-46E1-9564-C0580314C692}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69BE87E9-A598-46E1-9564-C0580314C692}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69BE87E9-A598-46E1-9564-C0580314C692}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69BE87E9-A598-46E1-9564-C0580314C692}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FAE6C866-E6F6-4D4E-8066-03D3916A8C39}
+	EndGlobalSection
+EndGlobal

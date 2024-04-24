@@ -1,0 +1,2 @@
+D:\baitapASPNET\LTQ_Lesson03\LTQ_Bai3.3\LTQ_Bai3.3\obj\Debug\LTQ_Bai3.3.csproj.AssemblyReference.cache
+D:\baitapASPNET\LTQ_Lesson03\LTQ_Bai3.3\LTQ_Bai3.3\obj\Debug\LTQ_Bai3.3.csproj.CoreCompileInputs.cache
