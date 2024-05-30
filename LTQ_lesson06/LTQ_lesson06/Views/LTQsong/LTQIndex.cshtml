@@ -1,0 +1,51 @@
+﻿@model IEnumerable<LTQ_lesson06.Models.LTQsong>
+
+@{
+    ViewBag.Title = "LTQ: Danh sách bài hát";
+}
+
+<h2>LTQ: Danh sách bài hát</h2>
+
+<p>
+    @Html.ActionLink("Create New", "LTQCreate")
+</p>
+<table class="table table-bordered">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LTQTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LTQAuthor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LTQArtist)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LTQYearRelease)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LTQTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LTQAuthor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LTQArtist)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LTQYearRelease)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
