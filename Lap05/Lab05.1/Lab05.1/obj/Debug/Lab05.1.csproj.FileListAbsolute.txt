@@ -1,0 +1,2 @@
+D:\baitapASPNET\LTQ_cntt2_ASP.NET\Lap05\Lab05.1\Lab05.1\obj\Debug\Lab05.1.csproj.AssemblyReference.cache
+D:\baitapASPNET\LTQ_cntt2_ASP.NET\Lap05\Lab05.1\Lab05.1\obj\Debug\Lab05.1.csproj.CoreCompileInputs.cache
