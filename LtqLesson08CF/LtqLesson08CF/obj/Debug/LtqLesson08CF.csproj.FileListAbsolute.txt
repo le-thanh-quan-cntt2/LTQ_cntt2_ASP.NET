@@ -1,0 +1,2 @@
+D:\baitapASPNET\LTQ_cntt2_ASP.NET\LtqLesson08CF\LtqLesson08CF\obj\Debug\LtqLesson08CF.csproj.AssemblyReference.cache
+D:\baitapASPNET\LTQ_cntt2_ASP.NET\LtqLesson08CF\LtqLesson08CF\obj\Debug\LtqLesson08CF.csproj.CoreCompileInputs.cache
