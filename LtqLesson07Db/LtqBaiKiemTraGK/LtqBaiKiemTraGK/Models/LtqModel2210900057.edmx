@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="LtqCNTT2Lesson07DbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ltqKhoa">
+          <Key>
+            <PropertyRef Name="LtqMaKH" />
+          </Key>
+          <Property Name="LtqMaKH" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="LtqtenKH" Type="nvarchar" MaxLength="50" />
+          <Property Name="LtqTrangThai" Type="bit" />
+        </EntityType>
+        <EntityType Name="ltqSinhVien">
+          <Key>
+            <PropertyRef Name="LtqMaSV" />
+          </Key>
+          <Property Name="LtqMaSV" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LtqHoSV" Type="nvarchar" MaxLength="50" />
+          <Property Name="LtqTenSV" Type="nvarchar" MaxLength="50" />
+          <Property Name="LtqNgaySinh" Type="date" />
+          <Property Name="LtqPhai" Type="bit" />
+          <Property Name="LtqPhone" Type="nchar" MaxLength="10" />
+          <Property Name="LtqEmail" Type="nvarchar" MaxLength="50" />
+          <Property Name="LtqMaKH" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityContainer Name="LtqCNTT2Lesson07DbModelStoreContainer">
+          <EntitySet Name="ltqKhoa" EntityType="Self.ltqKhoa" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ltqSinhVien" EntityType="Self.ltqSinhVien" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="LtqCNTT2Lesson07DbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ltqKhoa">
+          <Key>
+            <PropertyRef Name="LtqMaKH" />
+          </Key>
+          <Property Name="LtqMaKH" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="LtqtenKH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LtqTrangThai" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="ltqSinhVien">
+          <Key>
+            <PropertyRef Name="LtqMaSV" />
+          </Key>
+          <Property Name="LtqMaSV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LtqHoSV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LtqTenSV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LtqNgaySinh" Type="DateTime" Precision="0" />
+          <Property Name="LtqPhai" Type="Boolean" />
+          <Property Name="LtqPhone" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="LtqEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LtqMaKH" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="LtqCNTT2Lesson07DbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ltqKhoa" EntityType="Self.ltqKhoa" />
+          <EntitySet Name="ltqSinhVien" EntityType="Self.ltqSinhVien" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="LtqCNTT2Lesson07DbModelStoreContainer" CdmEntityContainer="LtqCNTT2Lesson07DbEntities">
+          <EntitySetMapping Name="ltqKhoa">
+            <EntityTypeMapping TypeName="LtqCNTT2Lesson07DbModel.ltqKhoa">
+              <MappingFragment StoreEntitySet="ltqKhoa">
+                <ScalarProperty Name="LtqMaKH" ColumnName="LtqMaKH" />
+                <ScalarProperty Name="LtqtenKH" ColumnName="LtqtenKH" />
+                <ScalarProperty Name="LtqTrangThai" ColumnName="LtqTrangThai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ltqSinhVien">
+            <EntityTypeMapping TypeName="LtqCNTT2Lesson07DbModel.ltqSinhVien">
+              <MappingFragment StoreEntitySet="ltqSinhVien">
+                <ScalarProperty Name="LtqMaSV" ColumnName="LtqMaSV" />
+                <ScalarProperty Name="LtqHoSV" ColumnName="LtqHoSV" />
+                <ScalarProperty Name="LtqTenSV" ColumnName="LtqTenSV" />
+                <ScalarProperty Name="LtqNgaySinh" ColumnName="LtqNgaySinh" />
+                <ScalarProperty Name="LtqPhai" ColumnName="LtqPhai" />
+                <ScalarProperty Name="LtqPhone" ColumnName="LtqPhone" />
+                <ScalarProperty Name="LtqEmail" ColumnName="LtqEmail" />
+                <ScalarProperty Name="LtqMaKH" ColumnName="LtqMaKH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

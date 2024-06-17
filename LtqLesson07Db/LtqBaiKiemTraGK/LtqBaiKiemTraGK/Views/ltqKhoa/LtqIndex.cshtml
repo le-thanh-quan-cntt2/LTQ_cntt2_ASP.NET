@@ -1,0 +1,39 @@
+﻿@model IEnumerable<LtqBaiKiemTraGK.Models.ltqKhoa>
+
+@{
+    ViewBag.Title = "LtqIndex";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("LTQ: Create New", "LtqCreate")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LtqtenKH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LtqTrangThai)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LtqtenKH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LtqTrangThai)
+        </td>
+        <td>
+            @Html.ActionLink("LTQ:Edit", "LtqEdit", new { id=item.LtqMaKH }) |
+            @Html.ActionLink("LTQ:Details", "LtqDetails", new { id=item.LtqMaKH }) |
+            @Html.ActionLink("LTQ:Delete", "LtqDelete", new { id=item.LtqMaKH })
+        </td>
+    </tr>
+}
+
+</table>

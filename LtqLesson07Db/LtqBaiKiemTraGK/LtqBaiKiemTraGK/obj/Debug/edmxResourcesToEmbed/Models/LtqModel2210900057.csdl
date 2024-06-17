@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LtqCNTT2Lesson07DbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ltqKhoa">
+    <Key>
+      <PropertyRef Name="LtqMaKH" />
+    </Key>
+    <Property Name="LtqMaKH" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="LtqtenKH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LtqTrangThai" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="ltqSinhVien">
+    <Key>
+      <PropertyRef Name="LtqMaSV" />
+    </Key>
+    <Property Name="LtqMaSV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LtqHoSV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LtqTenSV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LtqNgaySinh" Type="DateTime" Precision="0" />
+    <Property Name="LtqPhai" Type="Boolean" />
+    <Property Name="LtqPhone" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="LtqEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LtqMaKH" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="LtqCNTT2Lesson07DbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ltqKhoa" EntityType="Self.ltqKhoa" />
+    <EntitySet Name="ltqSinhVien" EntityType="Self.ltqSinhVien" />
+  </EntityContainer>
+</Schema>
