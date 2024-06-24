@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e6680b3001284547a0de281b4ca94425" Name="Diagram1">
+        <EntityTypeShape EntityType="LtqCNTT2_Lesson10DbModel.Ltq_Ketqua" Width="1.5" PointX="5.25" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LtqCNTT2_Lesson10DbModel.Ltq_Monhoc" Width="1.5" PointX="3" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LtqCNTT2_Lesson10DbModel.Ltq_SinhVien" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="LtqCNTT2_Lesson10DbModel.ltqKhoa" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <AssociationConnector Association="LtqCNTT2_Lesson10DbModel.FK_Ltq_Ketqua_Ltq_Monhoc" ManuallyRouted="false" />
+        <AssociationConnector Association="LtqCNTT2_Lesson10DbModel.FK_Ltq_Ketqua_Ltq_SinhVien" ManuallyRouted="false" />
+        <AssociationConnector Association="LtqCNTT2_Lesson10DbModel.FK_Ltq_SinhVien_ltqKhoa" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

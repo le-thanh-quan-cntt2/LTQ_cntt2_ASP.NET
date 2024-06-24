@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Ltq_Lesson10Db.Models.Ltq_Ketqua>
+
+@{
+    ViewBag.Title = "LtqIndex";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("LTQ:Create New", "LtqCreate")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LtqDiem)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ltq_Monhoc.LtqTenMH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ltq_SinhVien.LtqHoSV)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LtqDiem)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ltq_Monhoc.LtqTenMH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ltq_SinhVien.LtqHoSV)
+        </td>
+        <td>
+            @Html.ActionLink("LTQ:Edit", "LtqEdit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("LTQ:Details", "LtqDetails", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("LTQ:Delete", "LtqDelete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,26 @@
+﻿@model Ltq_Lesson10Db.Models.ltqKhoa
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ltqKhoa</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LtqTenKH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LtqTenKH)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.LtqMaKH }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,42 @@
+﻿@model Ltq_Lesson10Db.Models.Ltq_Ketqua
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Ltq_Ketqua</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LtqDiem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LtqDiem)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ltq_Monhoc.LtqTenMH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ltq_Monhoc.LtqTenMH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ltq_SinhVien.LtqHoSV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ltq_SinhVien.LtqHoSV)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

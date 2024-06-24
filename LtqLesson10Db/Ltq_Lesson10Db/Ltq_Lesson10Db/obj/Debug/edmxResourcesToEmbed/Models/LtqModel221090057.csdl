@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LtqCNTT2_Lesson10DbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Ltq_Ketqua">
+    <Key>
+      <PropertyRef Name="LtqMaSV" />
+      <PropertyRef Name="LtqMaMH" />
+    </Key>
+    <Property Name="LtqMaSV" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="LtqMaMH" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="LtqDiem" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Ltq_Monhoc" Relationship="Self.FK_Ltq_Ketqua_Ltq_Monhoc" FromRole="Ltq_Ketqua" ToRole="Ltq_Monhoc" />
+    <NavigationProperty Name="Ltq_SinhVien" Relationship="Self.FK_Ltq_Ketqua_Ltq_SinhVien" FromRole="Ltq_Ketqua" ToRole="Ltq_SinhVien" />
+  </EntityType>
+  <EntityType Name="Ltq_Monhoc">
+    <Key>
+      <PropertyRef Name="LtqMaMH" />
+    </Key>
+    <Property Name="LtqMaMH" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="LtqTenMH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LtqSotiet" Type="Int32" />
+    <NavigationProperty Name="Ltq_Ketqua" Relationship="Self.FK_Ltq_Ketqua_Ltq_Monhoc" FromRole="Ltq_Monhoc" ToRole="Ltq_Ketqua" />
+  </EntityType>
+  <EntityType Name="Ltq_SinhVien">
+    <Key>
+      <PropertyRef Name="LtqMaSV" />
+    </Key>
+    <Property Name="LtqMaSV" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="LtqHoSV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LtqTenSV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LtqPhai" Type="Boolean" />
+    <Property Name="LtqNgaySinh" Type="DateTime" Precision="0" />
+    <Property Name="LtqNoiSinh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LtqMaKH" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="LtqHocBong" Type="Double" />
+    <Property Name="LtqDiemTrungBinh" Type="Double" />
+    <NavigationProperty Name="Ltq_Ketqua" Relationship="Self.FK_Ltq_Ketqua_Ltq_SinhVien" FromRole="Ltq_SinhVien" ToRole="Ltq_Ketqua" />
+    <NavigationProperty Name="ltqKhoa" Relationship="Self.FK_Ltq_SinhVien_ltqKhoa" FromRole="Ltq_SinhVien" ToRole="ltqKhoa" />
+  </EntityType>
+  <EntityType Name="ltqKhoa">
+    <Key>
+      <PropertyRef Name="LtqMaKH" />
+    </Key>
+    <Property Name="LtqMaKH" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="LtqTenKH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Ltq_SinhVien" Relationship="Self.FK_Ltq_SinhVien_ltqKhoa" FromRole="ltqKhoa" ToRole="Ltq_SinhVien" />
+  </EntityType>
+  <Association Name="FK_Ltq_Ketqua_Ltq_Monhoc">
+    <End Role="Ltq_Monhoc" Type="Self.Ltq_Monhoc" Multiplicity="1" />
+    <End Role="Ltq_Ketqua" Type="Self.Ltq_Ketqua" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ltq_Monhoc">
+        <PropertyRef Name="LtqMaMH" />
+      </Principal>
+      <Dependent Role="Ltq_Ketqua">
+        <PropertyRef Name="LtqMaMH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ltq_Ketqua_Ltq_SinhVien">
+    <End Role="Ltq_SinhVien" Type="Self.Ltq_SinhVien" Multiplicity="1" />
+    <End Role="Ltq_Ketqua" Type="Self.Ltq_Ketqua" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ltq_SinhVien">
+        <PropertyRef Name="LtqMaSV" />
+      </Principal>
+      <Dependent Role="Ltq_Ketqua">
+        <PropertyRef Name="LtqMaSV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ltq_SinhVien_ltqKhoa">
+    <End Role="ltqKhoa" Type="Self.ltqKhoa" Multiplicity="0..1" />
+    <End Role="Ltq_SinhVien" Type="Self.Ltq_SinhVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ltqKhoa">
+        <PropertyRef Name="LtqMaKH" />
+      </Principal>
+      <Dependent Role="Ltq_SinhVien">
+        <PropertyRef Name="LtqMaKH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="LtqCNTT2_Lesson10DbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Ltq_Ketqua" EntityType="Self.Ltq_Ketqua" />
+    <EntitySet Name="Ltq_Monhoc" EntityType="Self.Ltq_Monhoc" />
+    <EntitySet Name="Ltq_SinhVien" EntityType="Self.Ltq_SinhVien" />
+    <EntitySet Name="ltqKhoa" EntityType="Self.ltqKhoa" />
+    <AssociationSet Name="FK_Ltq_Ketqua_Ltq_Monhoc" Association="Self.FK_Ltq_Ketqua_Ltq_Monhoc">
+      <End Role="Ltq_Monhoc" EntitySet="Ltq_Monhoc" />
+      <End Role="Ltq_Ketqua" EntitySet="Ltq_Ketqua" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ltq_Ketqua_Ltq_SinhVien" Association="Self.FK_Ltq_Ketqua_Ltq_SinhVien">
+      <End Role="Ltq_SinhVien" EntitySet="Ltq_SinhVien" />
+      <End Role="Ltq_Ketqua" EntitySet="Ltq_Ketqua" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ltq_SinhVien_ltqKhoa" Association="Self.FK_Ltq_SinhVien_ltqKhoa">
+      <End Role="ltqKhoa" EntitySet="ltqKhoa" />
+      <End Role="Ltq_SinhVien" EntitySet="Ltq_SinhVien" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

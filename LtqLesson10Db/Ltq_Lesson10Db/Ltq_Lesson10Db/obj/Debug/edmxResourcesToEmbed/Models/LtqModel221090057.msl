@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LtqCNTT2_Lesson10DbModelStoreContainer" CdmEntityContainer="LtqCNTT2_Lesson10DbEntities">
+    <EntitySetMapping Name="Ltq_Ketqua">
+      <EntityTypeMapping TypeName="LtqCNTT2_Lesson10DbModel.Ltq_Ketqua">
+        <MappingFragment StoreEntitySet="Ltq_Ketqua">
+          <ScalarProperty Name="LtqMaSV" ColumnName="LtqMaSV" />
+          <ScalarProperty Name="LtqMaMH" ColumnName="LtqMaMH" />
+          <ScalarProperty Name="LtqDiem" ColumnName="LtqDiem" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ltq_Monhoc">
+      <EntityTypeMapping TypeName="LtqCNTT2_Lesson10DbModel.Ltq_Monhoc">
+        <MappingFragment StoreEntitySet="Ltq_Monhoc">
+          <ScalarProperty Name="LtqMaMH" ColumnName="LtqMaMH" />
+          <ScalarProperty Name="LtqTenMH" ColumnName="LtqTenMH" />
+          <ScalarProperty Name="LtqSotiet" ColumnName="LtqSotiet" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ltq_SinhVien">
+      <EntityTypeMapping TypeName="LtqCNTT2_Lesson10DbModel.Ltq_SinhVien">
+        <MappingFragment StoreEntitySet="Ltq_SinhVien">
+          <ScalarProperty Name="LtqMaSV" ColumnName="LtqMaSV" />
+          <ScalarProperty Name="LtqHoSV" ColumnName="LtqHoSV" />
+          <ScalarProperty Name="LtqTenSV" ColumnName="LtqTenSV" />
+          <ScalarProperty Name="LtqPhai" ColumnName="LtqPhai" />
+          <ScalarProperty Name="LtqNgaySinh" ColumnName="LtqNgaySinh" />
+          <ScalarProperty Name="LtqNoiSinh" ColumnName="LtqNoiSinh" />
+          <ScalarProperty Name="LtqMaKH" ColumnName="LtqMaKH" />
+          <ScalarProperty Name="LtqHocBong" ColumnName="LtqHocBong" />
+          <ScalarProperty Name="LtqDiemTrungBinh" ColumnName="LtqDiemTrungBinh" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ltqKhoa">
+      <EntityTypeMapping TypeName="LtqCNTT2_Lesson10DbModel.ltqKhoa">
+        <MappingFragment StoreEntitySet="ltqKhoa">
+          <ScalarProperty Name="LtqMaKH" ColumnName="LtqMaKH" />
+          <ScalarProperty Name="LtqTenKH" ColumnName="LtqTenKH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
